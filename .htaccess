@@ -1,0 +1,20 @@
+
+#CSS/JS COMBINERS
+RewriteRule ^loader/js/(.*) /combine.php?type=javascript&files=$1 [L]
+RewriteRule ^loader/css/(.*) /combine.php?type=css&files=$1 [L]
+RewriteRule ^loader/jscss/(.*) /combine.php?type=javascriptcss&files=$1 [L]
+
+
+#Rewrite Web URL
+RewriteEngine On
+
+#Describe addtional condition for a rewrite rul
+  #Not going to redirect if it is Actual physical directory [Dont want to display directory tree]
+  #RewriteCond %{REQUEST_FILENAME} !-d
+
+  #ONLY not going to redirect if it is Actual physical file (for e.g. http://www.mvc.lcl/public/bootstrap/bscss/bootstrap.css)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+
+#Whatever url is typed is first redircted to the main index page
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]

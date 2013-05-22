@@ -1,0 +1,15 @@
+#header {
+  padding: 20px;
+  background: gold;
+}
+body {
+  background: silver;
+}
+#content {
+  background: #fff;
+  padding: 20px;
+}
+#footer {
+  background: gray;
+  padding: 20px;
+}/*Default css*/

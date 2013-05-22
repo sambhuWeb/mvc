@@ -1,0 +1,13 @@
+#######################
+#Application specific
+#########################
+/config/servers.ini.php
+/config/server.ini.php
+/config/dbconfig_local.ini.php
+/config/database.php
+/nbproject
+/tmp/cache/js
+/tmp/cache/css
+/tmp/cache/jscss
+/tmp/cache/data
+/unused-files
