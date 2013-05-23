@@ -13,6 +13,7 @@ class Dashboard extends Controller{
   }
 
   public function index(){
+    parent::loadJs(array("jquery", "dashboard"));
     $this->view->render('commonInc/header');
     $this->view->render('dashboard/index');
     $this->view->render('commonInc/footer');
@@ -22,6 +23,18 @@ class Dashboard extends Controller{
     Session::destroy();
     header('location:'._CURRENT_DOMAIN.DS.'login');
     exit();
+  }
+
+  function xhrInsert(){//xml http request
+    $this->model->xhrInsert();
+  }
+
+  public function xhrGetListings(){
+    $this->model->xhrGetListings();
+  }
+
+  public function xhrDeleteListing(){
+    $this->model->xhrDeleteListing();
   }
 }
 
