@@ -33,7 +33,7 @@
  * @license    http://www.opensource.org/licenses/MIT MIT License
  * @link       https://github.com/GaretJax/phpbrowscap/
  */
-class Browscap
+class Browsercap
 {
 
    //const DS = '/';

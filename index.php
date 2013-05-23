@@ -1,20 +1,14 @@
 <?php
+
 //use the auto loader
 require 'config/path.inc.php';
 require 'config/database.php';
-require_once 'libs/Browsercap.php';
 require 'libs/function.php';
-require_once 'libs/startup.php';
-require 'libs/Bootstrap.php';
-//require _FILE_ROOT. DS. 'config'. DS. 'path.inc.' . PHPEX;
-require 'libs/Controller.php';
-require 'libs/View.php';
-require 'libs/Model.php';
 
-//library
-//require 'libs/Database.php';
-require 'libs/AppConfig.php';
-require 'libs/dbmc.php';
-require 'libs/Session.php';
+function __autoload($class){
+  require "libs/$class.php";
+}
+
+echo "<pre>".print_r(get_class_methods('Browsercap'), true)."</pre>";
 
 $app = new Bootstrap();
