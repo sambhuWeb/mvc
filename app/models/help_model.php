@@ -2,7 +2,7 @@
 
 class Help_Model extends Model {
   function __construct() {
-    echo "Help Model - Business Logic <br />";
+    //echo "Help Model - Business Logic <br />";
   }
 
   function add(){

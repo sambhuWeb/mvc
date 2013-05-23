@@ -1,10 +1,7 @@
 <html>
   <head>
-    <title>Use Header variable</title>
-    <link href="/loader/css/bootstrap|bootstrap-responsive|default|testcss/" rel="stylesheet" type="text/css" />
-    <!--link href="<?= _CURRENT_DOMAIN . DS ?>public/bootstrap/bscss/bootstrap.min.css" rel="stylesheet">
-    <link href="<?= _CURRENT_DOMAIN . DS ?>public/bootstrap/bscss/bootstrap-responsive.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?= _CURRENT_DOMAIN . DS ?>public/css/default.css" /-->
+    <title>Use Header variable</title>    
+    <link href=<?= $this->cssFilesLink; ?> rel="stylesheet">
   </head>
   <body>  
     <div id="header">
@@ -19,4 +16,4 @@
       <?php endif; ?>
     </div>
 
-    <div Id="content">
+    <div id="content">
